@@ -57,12 +57,13 @@ export default function Projects() {
       dependencies: (
         <>
           {netlifyLogo}
+          <p><b>Email.js</b></p>
         </>
       ),
       description: (
         <>
           <p>
-            This is my portfolio website built using{" "}<em>React and Vite </em> is a modern 
+            This is my portfolio website built using{" "}<em>React, Vite and emial.js</em> is a modern 
             and efficient way to showcase my skills and projects Utilizing React allows for dynamic 
             and interactive components, enabling seamless navigation and engaging 
             user experiences. Vite, as a fast build tool, ensures rapid development 
@@ -74,8 +75,8 @@ export default function Projects() {
           </p>
         </>
       ),
-      demoUrl: "https://voguevalue.netlify.app",
-      codeUrl: "https://github.com/aksarvaiya/qr-code-generator",
+      demoUrl: "https://aksarvaiya.netlify.app/",
+      codeUrl: "https://github.com/aksarvaiya/aksarvaiya-portfolio",
       image: personalPort,
     },
     {
