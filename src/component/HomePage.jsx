@@ -39,7 +39,11 @@ export default function HomePage() {
       )
       .then(
         () => {
-          console.log("SUCCESS!");
+          alert("Message Sent");
+          console.log("SUCCESS!", form.current.user_name);
+          form.current.user_name.value= "",
+          form.current.user_email.value="",
+          form.current.message.value=""
         },
         (error) => {
           console.log("FAILED...", error.text);
