@@ -1,0 +1,170 @@
+.projectWheelContainer {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 1);
+}
+
+.projectWheel {
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+.project {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px dotted var(--border_color1);
+    align-items: center;
+    height: 490px;
+}
+
+.projectInfo {
+    font-size: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 600px;
+    height: 90%;
+    color: var(--body_color1);
+}
+
+.projectInfo a {
+    text-decoration: none;
+    background-color: rgb(33, 161, 121);
+    color: white;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.projectInfo a:active {
+    background-color: rgb(23, 100, 76);
+    color: grey;
+}
+
+.projectImg img {
+    height: 300px;
+    border: 1px solid black
+}
+
+.projectStacks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 50px;
+}
+
+.netlifyLogo {
+    height: 25px;
+}
+
+.viteLogo {
+    height: 50px;
+}
+
+.projectDeps {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.projectDesc {
+    font-size: 12px;
+    display: flex;
+    height: fit-content;
+    width: 80%;
+    white-space: normal;
+    justify-content: center;
+}
+
+.wheel-btns {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+}
+
+.btn-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.indicator-btns {
+    border: none;
+    cursor: pointer;
+}
+
+.indicators>button {
+    margin: 5px;
+    background: none;
+}
+
+.indicator-symbol {
+    color: gainsboro;
+}
+
+.indicator-symbol-active {
+    color: grey;
+}
+
+@media (width <=768px) {
+    .project {
+        flex-direction: column;
+        border: none;
+    }
+
+    .projectImg img {
+        border: 1px solid black;
+        height: 250px;
+    }
+
+    .projectStacks {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .projectInfo {
+        max-width: 20%;
+        max-height: 100%;
+    }
+
+    .projectInfo h3 {
+        font-size: 18px;
+    }
+
+    .projectDeps {
+        font-size: 14px;
+        height: 25px;
+    }
+
+    .netlifyLogo {
+        height: 15px;
+    }
+
+    .viteLogo {
+        height: 25px;
+    }
+    
+    .wheel-btns {
+        margin-top: 10%;
+        gap: 10px;
+    }
+
+    .projectDesc {
+        width: 100%;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,393 @@
+.homePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+nav {
+    border-bottom: 1px solid var(--border_color2);
+    z-index: 3;
+    background-color: var(--body_background);
+    max-height: 20vh;
+    width: 100%;
+    animation: loadNav .5s ease-in;
+}
+
+@keyframes loadNav {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.logo {
+    color: var(--body_color);
+    font-size: 36px;
+    font-weight: 400;
+    width: fit-content;
+    margin: 30px 0 0 30px;
+    line-height: 100%;
+    cursor: pointer;
+}
+
+.navOptions {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.navOptions li {
+    width: fit-content;
+    margin: 0 20px;
+    font-size: 30px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.navOptions li:hover {
+    color: rgb(33, 161, 121);
+    text-decoration: underline;
+}
+
+.navOptions li:active {
+    color: rgb(23, 100, 76);
+}
+
+.introSection {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+    animation: loadIntro 1.5s ease-in;
+}
+
+@keyframes loadIntro {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* LottieFiles WaveSVG Animation */
+.lottieWave {
+    animation: loadSVG 1s ease-in;
+}
+
+@keyframes loadSVG {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.lottieEmail {
+    position: absolute;
+    transform: scale(1.2);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.introText {
+    height: fit-content;
+    cursor: default;
+}
+
+.introText h1 {
+    font-weight: 300;
+}
+
+.profileImg {
+    height: 150px;
+    width: 150px;
+    margin-top: 50px;
+    margin-left: 50px;
+    background-image: url(../assets/selfie.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    animation: floatingImg infinite 3s ease-in;
+}
+
+@keyframes floatingImg {
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0px 2px 3px black;
+    }
+}
+
+.contactBtns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.linkedin {
+    color: blue;
+    cursor: pointer;
+    height: 40px;
+}
+
+.github {
+    color: black;
+    cursor: pointer;
+    height: 40px;
+}
+
+/* About Me Section */
+.aboutMe {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutIntro {
+    text-align: justify;
+    font-weight: 300;
+    width: 50%;
+    margin: 50px;
+}
+
+.aboutIntro h2 {
+    font-weight: 500;
+}
+
+.aboutResume {
+    height: 70vh;
+    width: 50%;
+    margin: 50px;
+    text-align: center;
+}
+
+.aboutResume a {
+    display: none;
+}
+
+.techStack {
+    text-align: center;
+    border-top: 1px solid var(--border_color2);
+    border-bottom: 1px solid var(--border_color2);
+}
+
+.htmlLogo,
+.cssLogo,
+.jsLogo,
+.reactLogo,
+.vuejsLogo,
+.nodejsLogo,
+.mongoDBSVG {
+    height: 50px;
+}
+
+.stackLogos img {
+    height: 50px;
+}
+
+.techStack h2 {
+    font-weight: 500;
+    margin: 20px auto;
+}
+
+/*Infinite Scroll Marquee*/
+.scrollStack {
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    margin: 40px auto;
+    gap: var(--gap);
+}
+
+.stackLogos {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    animation: scrollLogos linear 30s infinite;
+}
+
+@keyframes scrollLogos {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+.projectSection {
+    text-align: center;
+}
+
+.projectSection h2 {
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.contactSection {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactSection h2 {
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.formContainer {
+    border-radius: 25px;
+    padding: 25px 50px;
+    max-width: 25%;
+    max-height: 50vh;
+    background-color: black;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+.contactForm,
+label {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    gap: 10px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    width: 100%;
+}
+
+.contactForm input {
+    width: 100%;
+}
+
+.contactForm textarea {
+    max-width: 25vw;
+    max-height: 15vh;
+}
+
+.contactForm button {
+    background-color: white;
+    color: black;
+    border: none;
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+
+@media (width <=768px) {
+    .logo {
+        margin: 0 0 10px 10px;
+    }
+
+    .navOptions li {
+        font-size: 20px;
+        font-weight: 200;
+    }
+
+    .introText {
+        margin-bottom: 100px;
+    }
+
+    .introText h1 {
+        font-size: 20px;
+    }
+
+    .profileImg {
+        height: 100px;
+        width: 100px;
+        margin-top: 50px;
+        margin-right: 20px;
+    }
+
+    .lottieWave {
+        display: flex;
+        align-items: flex-end;
+        height: 50%;
+    }
+
+    .aboutMe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutIntro {
+        font-size: 14px;
+        margin-bottom: 0;
+        width: 90%;
+    }
+
+    .aboutResume {
+        height: auto;
+        width: auto;
+    }
+
+    .aboutResume a {
+        text-decoration: none;
+        padding: 5px;
+        display: block;
+    }
+
+    .techStack {
+        font-size: 12px;
+        height: fit-content;
+    }
+
+    .scrollStack {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .techStack h2 {
+        margin: 10px;
+    }
+
+    .htmlLogo,
+    .cssLogo,
+    .jsLogo,
+    .reactLogo {
+        height: 25px;
+    }
+
+    .stackLogos img {
+        height: 25px;
+    }
+
+    .lottieEmail {
+        transform: scale(1);
+        margin-top: 40%;
+    }
+
+    .formContainer {
+        max-width: 50%;
+    }
+
+    .formContainer textarea {
+        max-width: 50vw;
+        max-height: 15vh;
+    }
+}

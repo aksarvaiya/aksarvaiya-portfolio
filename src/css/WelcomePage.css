@@ -1,0 +1,47 @@
+.welcomePage {
+  height: 100vh;
+  width: auto;
+  background: var(--body_background);
+  display: flex;
+  align-items: flex-end;
+  animation: introAnim 2s ease-out;
+}
+
+.welcomePage h1 {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  color: var(--body_color1);
+  font-size: 200px;
+  margin: 0 0 30px 30px;
+}
+
+@keyframes introAnim {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    font-weight: 150;
+  }
+
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+    font-weight: 550;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+    font-weight: 150;
+  }
+}
+
+@media (width <=768px) {
+  .welcomePage {
+    align-items: center;
+  }
+
+  .welcomePage h1 {
+    font-size: 100px;
+  }
+}
